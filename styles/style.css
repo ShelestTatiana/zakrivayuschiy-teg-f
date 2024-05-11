@@ -41,7 +41,7 @@
   padding-block-end: 13px;
   gap: 20px;
   font-family: var(--header-font), sans-serif;
-  border: 2px solid var(--main-text-color);
+  border: var(--border) solid var(--main-text-color);
   font-weight: 400;
 }
 
@@ -77,7 +77,7 @@
   flex-direction: column;
   background-color: var(--main-bg-color);
   margin-block-end: 49px;
-  border: 2px solid var(--main-text-color);
+  border: var(--border) solid var(--main-text-color);
 }
 
 .about_sprint-header {
@@ -116,8 +116,8 @@
 
 .about_sprint-container {
   position: relative;
-  border-bottom: 2px solid var(--main-text-color);
-  border-top: 2px solid var(--main-text-color);
+  border-bottom: var(--border) solid var(--main-text-color);
+  border-top: var(--border) solid var(--main-text-color);
 }
 
 .about_sprint-logo {
@@ -133,6 +133,12 @@
   text-transform: uppercase;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--stroke-color);
+}
+
+@supports (-webkit-text-stroke-color: #fff) {
+  .about_sprint-logo {
+    -webkit-text-stroke-color: var(--stroke-color);
+  }
 }
 
 .logo-lowercase {
@@ -188,7 +194,7 @@
 
 .card__like-button,
 .save-button {
-  border: 2px solid var(--main-text-color);
+  border: var(--border) solid var(--main-text-color);
   padding: 9px 17px;
   background-color: var(--main-bg-color);
   block-size: 38px;
@@ -240,7 +246,6 @@
   width: 100%;
   max-width: 40px;
 }
-
 
 /* footer */
 .footer {

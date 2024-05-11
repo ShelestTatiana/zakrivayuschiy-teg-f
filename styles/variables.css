@@ -6,18 +6,9 @@
     --stroke-color: #fff;  
     --difference-color: #fff;   
     --bg-dialog:#000;
+    --header-weight: 700;
+    --text-weight: 400;
     --main-font: 'Inter Variable';
     --header-font: 'PressStart2P';
-
-    --size-xxs: 1px;
-    --size-xs: 2px;
-    --size-s: 18px;
-  
-    /* ;
-  
-
-    --size-sm: 21px;
-    --size-m:  ;  
-    --size-ml:  ;  
-    --size-l:  ;   */
+    --border: 2px;
   }
