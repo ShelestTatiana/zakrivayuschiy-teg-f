@@ -12,3 +12,147 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* анимация меню */
+.theme-menu__button:disabled::before {
+    content: '▶';
+    position: absolute;
+    width: 10px;
+    height: 10px; 
+    animation: move 0.5s ease-in-out infinite;
+    margin-inline-start: -20px;
+}
+
+.theme-menu__button:disabled {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.theme-menu__button:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.theme-menu__button:focus {
+    outline: none;
+    opacity: 0.6;
+}
+
+.theme-menu__button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    opacity: 0.6;
+    transition: width 0.3s ease;
+    background-color: var(--main-text-color);
+}
+
+.theme-menu__button:focus-visible::after {
+    width: 100%;
+}
+
+@keyframes move {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    50% {
+        transform: scale(1) translateX(4px);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}
+
+/* анимация сердца */
+.like-icon {
+    fill: var(--main-text-color);
+}
+  
+.heart {
+    transition: fill 0.1s;
+    transform-origin: center center;
+}
+
+/* .like-icon .main-body {
+    fill: var(--main-text-color);
+    transition: fill 0.3s;
+} */
+
+.like-icon.is-liked .main-body {
+    fill: #FF0000;
+    transition: fill 0.3s 0.03s;
+}
+
+/* .like-icon .core {
+    fill: var(--main-text-color);
+    transition: fill 0.3s 0.05s;
+} */
+
+.like-icon.is-liked .core {
+    fill: #FF0000;
+    transition: fill 0.3s;
+}
+  
+.contour {
+    fill: var(--main-text-color);
+}
+   
+.like-icon.is-liked .contour {
+    fill: #FF0000;
+    transition: fill 0.3s 0.05s;
+}
+
+.sparks {
+    opacity: 0;
+    fill: #FF0000;
+}
+
+.like-icon.is-liked .sparks {
+    animation: sparks 0.3s ease-in;
+}
+
+.like-icon.is-liked .heart {
+    animation: scale 0.3s ease-in;
+} 
+
+.card__icon-button:hover .main-body {
+    fill: var(--main-text-color);
+    transition: fill 0.5s 0.03s;
+}
+
+.card__icon-button:hover .core {
+    fill: var(--main-text-color);
+    transition: fill 0.3s 0.03s;
+}
+
+.card__icon-button:active .main-body {
+    fill: #FF0000;
+    transition: fill 0.3s 0.05s;
+}
+
+.card__icon-button:active .core {
+    fill: #FF0000;
+    transition: fill 0.3s;
+}
+
+@keyframes scale {
+    from {
+        scale: 0;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+@keyframes sparks {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+

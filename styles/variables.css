@@ -1,1 +1,23 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --main-bg-color: #fff;
+    --main-text-color: #000; 
+    --stroke-color: #fff;  
+    --difference-color: #fff;   
+    --bg-dialog:#000;
+    --main-font: 'Inter Variable';
+    --header-font: 'PressStart2P';
+
+    --size-xxs: 1px;
+    --size-xs: 2px;
+    --size-s: 18px;
+  
+    /* ;
+  
+
+    --size-sm: 21px;
+    --size-m:  ;  
+    --size-ml:  ;  
+    --size-l:  ;   */
+  }
