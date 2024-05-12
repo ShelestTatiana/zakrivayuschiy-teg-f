@@ -1,14 +1,14 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-    --main-bg-color: #fff;
-    --main-text-color: #000; 
-    --stroke-color: #fff;  
-    --difference-color: #fff;   
-    --bg-dialog:#000;
-    --header-weight: 700;
-    --text-weight: 400;
-    --main-font: 'Inter Variable';
-    --header-font: 'PressStart2P';
-    --border: 2px;
-  }
+  --main-bg-color: #fff;
+  --main-text-color: #000; 
+  --stroke-color: #fff;  
+  --difference-color: #fff;   
+  --bg-dialog:#000;
+  --main-font: 'Inter Variable';
+  --header-font: 'PressStart2P';
+  --border: 2px;
+  --header-weight: 700;
+  --text-weight: 400;
+}
