@@ -43,7 +43,6 @@
   font-family: var(--header-font), fantasy;
   border: var(--border) solid var(--main-text-color);
   font-weight: var(--text-weight);
-  font-variation-settings: 'wght' var(--text-weight);
 }
 
 .header-logo {
@@ -86,7 +85,6 @@
 .about_sprint-header {
   padding: 6px 10px;
   color: var(--main-text-color);
-  font-weight: var(--header-weight);
   font-variation-settings: 'wght' var(--header-weight);
   font-size: 18px;
 }
@@ -98,7 +96,6 @@
 }
 
 .about_sprint-text {
-  font-weight: var(--text-weight);
   font-variation-settings: 'wght' var(--text-weight);
   font-size: 19px;
   line-height: 21px;
@@ -126,7 +123,6 @@
   color: var(--main-text-color);
   font-family: var(--header-font), fantasy;
   font-weight: var(--text-weight);
-  font-variation-settings: 'wght' var(--text-weight);
   font-size: 14px;
   text-transform: uppercase;
   -webkit-text-stroke: 1px var(--stroke-color);
@@ -191,9 +187,9 @@
   padding: 9px 17px;
   background-color: var(--main-bg-color);
   font-weight: var(--text-weight);
-  font-variation-settings: 'wght' var(--text-weight);
   font-size: 14px;
   line-height: 13px; 
+  transition: 0.3s ease;
 }
 
 .card__like-button,
@@ -226,14 +222,12 @@
   outline: none;
 }
 
-.card__like-button:focus-visible,
-.save-button:focus-visible  {
+.button:focus-visible  {
   box-shadow: 2px 2px 0 var(--main-text-color);
   transition: box-shadow 0.3s ease;
 }
 
-.card__like-button::before,
-.save-button::before {
+.button::before {
   content: '';
   position: absolute;
   top: 0;
@@ -256,7 +250,6 @@
   font-family: var(--header-font), fantasy;
   color: var(--difference-color);
   font-weight: var(--text-weight);
-  font-variation-settings: 'wght' var(--text-weight);
   font-style: normal;
   mix-blend-mode: difference;
   line-height: 12.6px;
@@ -268,6 +261,7 @@
   background: transparent;
   border: none;
   padding: 0;
+  transition: outline 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -321,7 +315,6 @@
 
 .dialog-text {
   font-weight: var(--text-weight);
-  font-variation-settings: 'wght' var(--text-weight);
   font-size: 14px;
   line-height: 21px; 
   text-transform: uppercase;

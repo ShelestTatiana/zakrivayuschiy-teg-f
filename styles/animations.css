@@ -30,8 +30,7 @@
 }
 
 .theme-menu__button {
-    opacity: 0.6;
-    transition: opacity 0.3s ease alternate;
+    animation: opacity 0.3s ease alternate;
 }
 
 .theme-menu__button:focus {
@@ -63,32 +62,32 @@
 }
 
 /* анимация сердца */
-.card__icon-button .main-body {
-    fill: none;
-    transition: fill 0.3s 0.05s linear;
-}
-
-.card__icon-button .core {
+.like-icon .main-body {
     fill: none;
     transition: fill 0.3s linear;
 }
 
-.card__icon-button:hover .main-body {
+.like-icon .core {
+    fill: none;
+    transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .main-body {
     fill: var(--main-text-color);
     transition: fill 0.3s 0.05s linear;
 }
 
-.card__icon-button:hover .core {
+.like-icon:hover .core {
     fill: var(--main-text-color);
     transition: fill 0.3s linear;
 }
 
-.card__icon-button:active .main-body {
+.like-icon:active .main-body {
     fill: #FF0000;
     transition: fill 0.3s 0.05s linear;
 }
 
-.card__icon-button:active .core {
+.like-icon:active .core {
     fill: #FF0000;
     transition: fill 0.3s linear;
 }
@@ -113,6 +112,15 @@
     animation: scale 0.3s 0.1s ease-in alternate;
 }  
 
+@keyframes scale {
+    from {
+        animation: scale(1);
+    }
+    to {
+        animation: scale(1.5);
+    }
+}
+
 .like-icon.is-liked .sparks {
     animation: sparks 0.3s ease-in alternate;
 }
@@ -120,15 +128,6 @@
 .like-icon .contour {
     fill: var(--main-text-color);
     transition: fill 0.1s linear;
-}
-
-@keyframes scale {
-    from {
-        scale: 1;
-    }
-    to {
-        scale: 1.5;
-    }
 }
 
 .sparks {
