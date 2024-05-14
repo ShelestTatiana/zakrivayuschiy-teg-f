@@ -69,10 +69,6 @@
   text-transform: uppercase;
 }
 
-.theme-menu__button:disabled {
-  opacity: 0.6;
-}
-
 /* content */
 .about_sprint-article {
   display: flex;
@@ -189,14 +185,14 @@
   font-weight: var(--text-weight);
   font-size: 14px;
   line-height: 13px; 
-  transition: 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  position: relative;
 }
 
 .card__like-button,
 .save-button {
   inline-size: 130px;
   block-size: 38px;
-  position: relative;
 }
 
 .button:hover {
@@ -224,7 +220,6 @@
 
 .button:focus-visible  {
   box-shadow: 2px 2px 0 var(--main-text-color);
-  transition: box-shadow 0.3s ease;
 }
 
 .button::before {
@@ -240,8 +235,7 @@
   width: 0;
 }
 
-.card__like-button:hover::before,
-.save-button:hover::before {
+.button:hover::before{
   width: 100%;
 }
 

@@ -21,22 +21,30 @@
     height: 10px; 
     animation: move 0.5s ease-in-out infinite alternate;
     margin-inline-start: -20px;
-}
+} 
 
-.theme-menu__button:disabled {
+.theme-menu__button:disabled,
+.theme-menu__button:hover  {
     opacity: 0.6;
     transition: opacity 0.3s ease;
+} 
+
+.theme-menu__button:disabled {
     pointer-events: none;
 }
 
-.theme-menu__button {
-    animation: opacity 0.3s ease alternate;
-}
+.theme-menu__button:hover {
+    cursor: pointer;;
+} 
 
 .theme-menu__button:focus {
     outline: none;
     opacity: 0.6;
-}
+} 
+
+.theme-menu__button:focus-visible {
+    opacity: 0.6;
+} 
 
 .theme-menu__button::after {
     content: '';
@@ -46,11 +54,11 @@
     opacity: 0.6;
     transition: width 0.3s ease;
     background-color: var(--main-text-color);
-}
+} 
 
 .theme-menu__button:focus-visible::after {
     width: 100%;
-}
+} 
 
 @keyframes move {
     0% {
@@ -110,14 +118,15 @@
 
 .like-icon.is-liked .heart {
     animation: scale 0.3s 0.1s ease-in alternate;
+    transform-origin: center;
 }  
 
 @keyframes scale {
     from {
-        animation: scale(1);
+        scale: 1;
     }
     to {
-        animation: scale(1.5);
+        scale: 1.5;
     }
 }
 
