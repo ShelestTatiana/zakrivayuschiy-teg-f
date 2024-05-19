@@ -14,13 +14,19 @@
 */
 
 /* анимация меню */
+
+.theme-menu {
+    position: relative; 
+}
+
 .theme-menu__button:disabled::before {
     content: '▶';
     position: absolute;
     width: 10px;
     height: 10px; 
     animation: move 0.5s ease-in-out infinite alternate;
-    margin-inline-start: -20px;
+    left: 0;
+    margin-inline-start: 5px;
 } 
 
 .theme-menu__button:disabled,
